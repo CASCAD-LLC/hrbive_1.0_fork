@@ -10,6 +10,7 @@ from typing import Optional, List
 
 from telegram import Update
 
+from manager_bot.config import *
 from database import SessionLocal, Manager, Vacancy, Resume
 from services.constants import (
     BOT_FOR_APPLICANTS_USERNAME,
@@ -319,7 +320,6 @@ from manager_bot.database import init_db
 def main():
     # Проверка всех переменных
     try:
-        from manager_bot.config import *
         print("✅ Все переменные окружения загружены")
     except ValueError as e:
         print(f"🛑 Ошибка: {e}")
