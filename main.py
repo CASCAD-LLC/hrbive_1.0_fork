@@ -13,12 +13,8 @@ import logging.handlers
 from pathlib import Path
 from datetime import datetime
 
-
-# ------------- CONFIGURATION OF LOGGING -------------
-
-# Используем USERS_DATA_DIR из переменной окружения
 USERS_DATA_DIR = os.getenv("USERS_DATA_DIR", "/tmp/users_data")
-logs_dir = Path(USERS_DATA_DIR) / "logs" / "orchestrator_logs"
+logs_dir = Path(USERS_DATA_DIR) / "logs" / "applicant_bot_logs"
 logs_dir.mkdir(parents=True, exist_ok=True)
 
 log_filename = logs_dir / f"orchestrator_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
